@@ -2,7 +2,6 @@ var co = require('co');
 var fs = require('fs');
 var recursive = require('recursive-readdir');
 
-// var results = [];
 var dir = __dirname + '/files';
 var output = 'result.txt';
 
@@ -33,6 +32,5 @@ co(function *(){
       }
     }
   }
-  // console.log(results);
   fs.writeFileSync(output, results, 'utf8');
 })()
